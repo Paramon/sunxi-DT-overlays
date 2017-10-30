@@ -19,7 +19,7 @@
  		};
  	};
 
-	fragment@1 {
+	fragment@2 {
 		target = <&uart3>;
 		 __overlay__ {
 			pinctrl-names = "default";
