@@ -10,6 +10,14 @@
 			serial3 = "/soc/serial@01c28c00";
 		};
 	};
+	fragment@1 {
+ 		target = <&pio>;
+ 		__overlay__ {
+			pins = "PA13", "PA14";
+			function = "uart3";
+
+ 		};
+ 	};
 
 	fragment@1 {
 		target = <&uart3>;
