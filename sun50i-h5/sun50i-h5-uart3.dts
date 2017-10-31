@@ -10,19 +10,17 @@
 			serial3 = "/soc/serial@01c28c00";
 		};
 	};
-	
 
-	
 	fragment@1 {
-		target = <&gpio>;
+		target = <&pio>;
 		__overlay__ {
-			uart3_pins: uart3_pins {
-				brcm,pins = <13 14>;
-				brcm,function = <2>; /* alt5 */
-				brcm,pull = <0 2>;
+			uart3_rts_cts: uart3_rts_cts {
+				pins = "PA15", "PA16";
+				function = "uart3";
 			};
 		};
 	};
+
 	fragment@2 {
 		target = <&uart3>;
 		 __overlay__ {
